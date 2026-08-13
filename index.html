@@ -1,0 +1,2621 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>NEGM MOVIES</title>
+<meta property="og:site_name" content="NEGM MOVIES">
+<meta property="og:title" content="NEGM MOVIES">
+<meta property="og:description" content="منصة NEGM MOVIES VIP - شاهد أحدث الأفلام والمسلسلات العربية والعالمية بجودة عالية وبدون إعلانات">
+<meta property="og:image" content="Aihf_xsEBmGcTXfxweOGJjthqNaWCLUyOvnyfAk">
+<meta property="og:type" content="website">
+
+<!-- Favicon & Brand Logo -->
+<link rel="icon" href="Aihf_xsEBmGcTXfxweOGJjthqNaWCLUyOvnyfAk">
+<link rel="apple-touch-icon" href="Aihf_xsEBmGcTXfxweOGJjthqNaWCLUyOvnyfAk">
+
+<!-- Google Structured Data (Schema.org) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://felm.duckdns.org/#website",
+      "url": "https://felm.duckdns.org/",
+      "name": "NEGM MOVIES",
+      "publisher": {
+        "@id": "https://felm.duckdns.org/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://felm.duckdns.org/#organization",
+      "name": "NEGM MOVIES",
+      "url": "https://felm.duckdns.org/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "Aihf_xsEBmGcTXfxweOGJjthqNaWCLUyOvnyfAk"
+      }
+    }
+  ]
+}
+</script>
+
+<!-- SEO Enhancements -->
+<meta name="description" content="منصة NEGM MOVIES VIP - شاهد أحدث الأفلام والمسلسلات العربية والعالمية بجودة عالية وبدون إعلانات">
+<meta name="keywords" content="أفلام, مسلسلات, مشاهدة أفلام, NEGM MOVIES, سينما, أحدث الأفلام, مسلسلات رمضان">
+<link rel="canonical" href="https://negmmovies.com/">
+
+<!-- OneSignal SDK for Web Push Notifications -->
+<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  window.OneSignalDeferred.push(async function(OneSignal) {
+    try {
+      await OneSignal.init({
+        appId: "de1ce731-8984-412a-9d04-f04e9708263c",
+        safari_web_id: "",
+        notifyButton: { enable: true },
+        allowLocalhostAsSecureOrigin: true
+      });
+      
+      try {
+        if (OneSignal.Slidedown && typeof OneSignal.Slidedown.promptPush === 'function') {
+          await OneSignal.Slidedown.promptPush();
+        } else if (OneSignal.Notifications && typeof OneSignal.Notifications.requestPermission === 'function') {
+          await OneSignal.Notifications.requestPermission();
+        }
+      } catch(e) {
+        console.log("Notification prompt error:", e);
+      }
+    } catch(e) {
+      console.log("OneSignal initialization error:", e);
+    }
+  });
+</script>
+
+<style>
+/* =========================================================
+   NEGM MOVIES VIP — LAROZA STYLE / MOBILE FIRST
+   الشكل المحدث — الوظائف والـ IDs لا تتغير
+========================================================= */
+
+:root{
+  --bg:#050505;
+  --bg2:#0a0a0a;
+  --card:#121212;
+  --card2:#181818;
+  --text:#ffffff;
+  --muted:#999999;
+
+  --primary:#e50914;
+  --primary2:#ff1824;
+  --red:#ed111c;
+  --gold:#ffc400;
+
+  --border:rgba(255,255,255,.08);
+  --shadow:0 18px 55px rgba(0,0,0,.75);
+
+  --radius:8px;
+
+  --safe-top:env(safe-area-inset-top,0px);
+  --safe-bottom:calc(env(safe-area-inset-bottom,0px) + 1rem);
+
+  --header-height:64px;
+  --bottom-height:65px;
+}
+
+/* =========================================================
+   RESET
+========================================================= */
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  -webkit-tap-highlight-color:transparent;
+}
+
+html{
+  width:100%;
+  min-height:100%;
+  background:#050505;
+  scroll-behavior:smooth;
+}
+
+body{
+  width:100%;
+  min-width:0;
+  min-height:100dvh;
+  background:
+    radial-gradient(circle at 50% -20%, rgba(229,9,20,.1), transparent 40%),
+    #050505;
+  color:#fff;
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+  overflow-x:hidden;
+  padding-bottom:calc(var(--bottom-height) + var(--safe-bottom));
+}
+
+button, input, textarea, select{
+  font:inherit;
+}
+
+button{
+  border:0;
+  cursor:pointer;
+}
+
+img{
+  max-width:100%;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+/* =========================================================
+   LOADER
+========================================================= */
+.loader{
+  position:fixed;
+  inset:0;
+  width:100%;
+  height:100dvh;
+  background:#050505;
+  z-index:99999;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:opacity .45s ease, visibility .45s ease;
+}
+
+.loader.hidden{
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+}
+
+.loader-box{
+  text-align:center;
+  width:90%;
+  max-width:300px;
+}
+
+.logo-loader{
+  width:78px;
+  height:78px;
+  margin:auto;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:url("giphy.gif") center/cover no-repeat;
+  color:#fff;
+  font-size:36px;
+  font-weight:1000;
+  border:3px solid rgba(255,255,255,.15);
+  box-shadow:0 0 35px rgba(229,9,20,.4);
+  animation:loaderPulse 1.5s infinite;
+}
+
+@keyframes loaderPulse{
+  50%{
+    transform:scale(1.08);
+    box-shadow:0 0 60px rgba(229,9,20,.6);
+  }
+}
+
+.loader-text{
+  margin-top:18px;
+  color:#aaa;
+  font-size:14px;
+  font-weight:800;
+}
+
+.spinner{
+  width:32px;
+  height:32px;
+  border:3px solid rgba(255,255,255,.1);
+  border-top-color:#e50914;
+  border-radius:50%;
+  margin:20px auto 0;
+  animation:spin .8s linear infinite;
+}
+
+@keyframes spin{
+  to{ transform:rotate(360deg); }
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+.header{
+  position:fixed;
+  top:0;
+  right:0;
+  left:0;
+  height:calc(var(--header-height) + var(--safe-top));
+  padding-top:var(--safe-top);
+  z-index:1000;
+  background:rgba(8,8,8,.92);
+  backdrop-filter:blur(15px);
+  border-bottom:1px solid rgba(255,255,255,.06);
+  box-shadow:0 4px 20px rgba(0,0,0,.4);
+}
+
+.header-inner{
+  width:100%;
+  max-width:1400px;
+  height:var(--header-height);
+  margin:auto;
+  padding:0 15px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+}
+
+.logo{
+  min-width:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  font-size:18px;
+  font-weight:1000;
+  white-space:nowrap;
+  order:2;
+  cursor: pointer;
+}
+
+.logo span{
+  color:#e50914;
+}
+
+.logo-icon{
+  flex:0 0 auto;
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:url("giphy.gif") center/cover no-repeat;
+  color:#fff;
+  font-size:18px;
+  font-weight:1000;
+  border:2px solid rgba(255,255,255,.15);
+  box-shadow:0 0 15px rgba(229,9,20,.3);
+}
+
+.header-actions:first-child{ order:1; }
+.header-inner > .header-actions:last-child{ order:3; }
+
+.header-actions{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  flex:0 0 auto;
+}
+
+.icon-btn{
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  background:rgba(255,255,255,.05);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:16px;
+  border:1px solid rgba(255,255,255,.08);
+  transition:all .2s ease;
+  position: relative;
+}
+
+.icon-btn:active{
+  transform:scale(.88);
+  background:rgba(229,9,20,.25);
+  border-color:rgba(229,9,20,.5);
+}
+
+.notification-badge-dot {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 8px;
+  height: 8px;
+  background: var(--primary);
+  border-radius: 50%;
+  display: none;
+}
+
+/* =========================================================
+   SUB HEADER NAV
+========================================================= */
+.sub-header-nav {
+  display: flex; align-items: center; justify-content: center; gap: 15px;
+  background: var(--bg); padding: 8px 15px; border-bottom: 1px solid rgba(255,255,255,.04);
+  font-size: 13px; font-weight: 800; color: var(--muted);
+  position: fixed; top: calc( var(--header-height) + var(--safe-top) ); right: 0; left: 0; z-index: 999;
+}
+.sub-header-nav a, .sub-header-nav button { background: none; border: none; color: inherit; font: inherit; cursor: pointer; transition: color .2s; }
+.sub-header-nav a:hover, .sub-header-nav button:hover, .sub-header-nav .active { color: #fff; }
+.sub-header-nav .ramadan-badge { color: var(--gold); display: inline-flex; align-items: center; gap: 4px; }
+
+/* =========================================================
+   MAIN & HERO
+========================================================= */
+main{
+  width:100%;
+  min-width:0;
+  padding-top:calc(var(--header-height) + 40px + var(--safe-top));
+}
+
+.hero{
+  width:100%;
+  min-height:min(450px, calc(100dvh - 120px));
+  position:relative;
+  display:flex;
+  align-items:flex-end;
+  overflow:hidden;
+  isolation:isolate;
+  background:#000;
+}
+
+.hero-bg{
+  position:absolute;
+  inset:0;
+  background-size:cover;
+  background-position:center;
+  opacity:.75;
+  transform:scale(1.03);
+  transition:background-image .6s ease;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg, rgba(0,0,0,.1), rgba(0,0,0,.3) 40%, rgba(0,0,0,.8) 70%, #050505 98%);
+  z-index:1;
+}
+
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  z-index:1;
+  background:linear-gradient(90deg, rgba(0,0,0,.7), transparent 65%);
+}
+
+.hero-content{
+  position:relative;
+  z-index:3;
+  width:100%;
+  max-width:1400px;
+  margin:auto;
+  padding:20px 15px;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:4px 10px;
+  border-radius:4px;
+  background:#e50914;
+  color:#fff;
+  font-size:10px;
+  font-weight:1000;
+  margin-bottom:8px;
+  box-shadow:0 4px 15px rgba(229,9,20,.35);
+}
+
+.hero-title{
+  max-width:750px;
+  font-size:clamp(22px, 5vw, 36px);
+  line-height:1.2;
+  font-weight:1000;
+  letter-spacing:-.5px;
+  margin-bottom:6px;
+}
+
+.hero-description{
+  max-width:650px;
+  color:#ccc;
+  line-height:1.5;
+  margin:0 0 12px;
+  font-size:12px;
+  display:-webkit-box;
+  -webkit-line-clamp:2;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
+}
+
+.hero-buttons{
+  display:flex;
+  gap:8px;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+}
+
+.btn-larooza-play {
+  background: #fff; color: #000; border-radius: 6px; padding: 8px 18px; font-weight: 1000; font-size: 12px;
+  display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(255,255,255,.2);
+}
+.btn-larooza-secondary {
+  background: rgba(255,255,255,.12); color: #fff; border-radius: 6px; padding: 8px 14px; font-weight: 1000; font-size: 12px;
+  display: inline-flex; align-items: center; gap: 6px; backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,.1);
+}
+
+.hero-pagination {
+  display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%; margin-top: 12px; padding: 0 15px;
+}
+.hero-pag-line {
+  flex: 1; height: 3px; background: rgba(255,255,255,.2); border-radius: 4px; transition: .3s; cursor: pointer;
+}
+.hero-pag-line.active { background: var(--primary); height: 4px; }
+
+/* Stories Row */
+.stories-row {
+  display: flex; gap: 10px; overflow-x: auto; padding: 12px 15px; scrollbar-width: none; background: var(--bg);
+}
+.stories-row::-webkit-scrollbar { display: none; }
+.story-item {
+  flex: 0 0 68px; text-align: center; cursor: pointer;
+}
+.story-ring {
+  width: 68px; height: 68px; border-radius: 50%; padding: 2px; background: linear-gradient(135deg, var(--primary), var(--gold));
+  position: relative; margin-bottom: 4px;
+}
+.story-img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; border: 2px solid var(--bg); }
+.story-badge { position: absolute; top: -2px; right: -2px; background: var(--primary); color: #fff; font-size: 7px; font-weight: 900; padding: 2px 4px; border-radius: 4px; }
+.story-title { font-size: 10px; font-weight: 800; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: #ddd; }
+
+/* =========================================================
+   CONTAINER & SECTIONS
+========================================================= */
+.container{
+  width:100%;
+  max-width:1400px;
+  margin:auto;
+  padding:0 15px;
+}
+
+.section{
+  padding:12px 0;
+}
+
+.section-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  margin-bottom:10px;
+}
+
+.section-title{
+  font-size:16px;
+  font-weight:1000;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.section-title::before{
+  content:"";
+  display:inline-block;
+  width:4px;
+  height:14px;
+  border-radius:2px;
+  background:#e50914;
+}
+
+.view-all{
+  color:#aaa;
+  font-size:11px;
+  font-weight:900;
+  background:transparent;
+}
+
+/* =========================================================
+   MOVIE GRID & CARDS
+========================================================= */
+.movie-grid{
+  width:100%;
+  display:flex;
+  gap:10px;
+  overflow-x:auto;
+  overflow-y:hidden;
+  padding:4px 2px 8px;
+  scroll-snap-type:x proximity;
+  scrollbar-width:none;
+}
+
+.movie-grid::-webkit-scrollbar{ display:none; }
+
+.movie-card{
+  flex:0 0 125px;
+  position:relative;
+  background:#121212;
+  border:1px solid rgba(255,255,255,.06);
+  border-radius:8px;
+  overflow:hidden;
+  scroll-snap-align:start;
+  transition:transform .2s;
+  cursor: pointer;
+}
+
+.movie-card:active{ transform:scale(.96); }
+
+.poster{
+  width:100%;
+  aspect-ratio:2 / 3;
+  background:#0a0a0a;
+  position:relative;
+  overflow:hidden;
+  border-radius:8px;
+}
+
+.poster img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.poster-gradient{
+  position:absolute;
+  right:0; left:0; bottom:0; height:45%;
+  background:linear-gradient(transparent, rgba(0,0,0,.85));
+  pointer-events:none;
+}
+
+.rating{
+  position:absolute;
+  top:5px; right:5px;
+  background:rgba(0,0,0,.75);
+  padding:2px 5px;
+  border-radius:4px;
+  color:#ffc400;
+  font-size:9px;
+  font-weight:1000;
+  backdrop-filter:blur(4px);
+}
+
+.type-label{
+  position:absolute;
+  top:5px; left:5px;
+  background:#e50914;
+  color:#fff;
+  border-radius:4px;
+  padding:2px 5px;
+  font-size:8px;
+  font-weight:1000;
+}
+
+.card-info{
+  padding:6px 4px;
+}
+
+.card-title{
+  font-size:11px;
+  font-weight:900;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  text-align:center;
+}
+
+/* =========================================================
+   SEARCH OVERLAY
+========================================================= */
+.search-overlay{
+  position:fixed;
+  inset:0;
+  z-index:5000;
+  background:rgba(5,5,5,.96);
+  backdrop-filter:blur(20px);
+  opacity:0;
+  visibility:hidden;
+  transition:.25s;
+  overflow:auto;
+  padding:calc(65px + var(--safe-top)) 12px 20px;
+}
+
+.search-overlay.active{ opacity:1; visibility:visible; }
+
+.search-box{
+  width:100%;
+  max-width:800px;
+  margin:auto;
+  background:#121212;
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:12px;
+  padding:10px;
+}
+
+.search-input-wrap{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.search-input{
+  flex:1;
+  min-width:0;
+  height:40px;
+  background:#050505;
+  color:#fff;
+  border-radius:8px;
+  padding:0 10px;
+  font-size:13px;
+  border:1px solid rgba(255,255,255,.1);
+  outline:0;
+}
+
+.search-results{
+  margin-top:10px;
+  max-height:calc(100dvh - 160px);
+  overflow:auto;
+}
+
+/* =========================================================
+   MODALS
+========================================================= */
+.modal{
+  position:fixed;
+  inset:0;
+  z-index:6000;
+  background:rgba(0,0,0,.88);
+  backdrop-filter:blur(15px);
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+  opacity:0;
+  visibility:hidden;
+  transition:.25s;
+}
+
+.modal.active{ opacity:1; visibility:visible; }
+
+.modal-content{
+  width:100%;
+  max-width:1000px;
+  height:min(92dvh, 100%);
+  max-height:92dvh;
+  overflow-y:auto;
+  background:#090909;
+  border-radius:18px 18px 0 0;
+  transform:translateY(100%);
+  transition:transform .3s cubic-bezier(.1,1,.1,1);
+  box-shadow:0 -10px 30px rgba(0,0,0,.8);
+}
+
+.modal.active .modal-content{ transform:translateY(0); }
+
+.modal-cover{
+  width:100%;
+  min-height:220px;
+  background-size:cover;
+  background-position:center;
+  position:relative;
+}
+
+.modal-cover::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg, transparent, rgba(9,9,9,.8) 70%, #090909 100%);
+}
+
+.close-modal{
+  position:absolute;
+  top:calc(10px + var(--safe-top));
+  right:10px;
+  z-index:10;
+  width:32px;
+  height:32px;
+  border-radius:50%;
+  background:rgba(0,0,0,.6);
+  color:#fff;
+  font-size:14px;
+  border:1px solid rgba(255,255,255,.1);
+}
+
+.details{
+  position:relative;
+  margin-top:-45px;
+  z-index:5;
+  padding:0 12px 20px;
+}
+
+.details-poster{
+  width:80px;
+  aspect-ratio:2/3;
+  border-radius:8px;
+  object-fit:cover;
+  border:2px solid rgba(255,255,255,.2);
+  box-shadow:0 6px 15px rgba(0,0,0,.5);
+}
+
+.details-title{
+  font-size:18px;
+  line-height:1.2;
+  margin-top:8px;
+  font-weight:1000;
+}
+
+.details-meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  color:#999;
+  font-size:10px;
+  margin:6px 0;
+}
+
+.details-overview{
+  color:#ccc;
+  line-height:1.6;
+  font-size:12px;
+}
+
+/* =========================================================
+   CAST SECTION
+========================================================= */
+.cast-section{ margin-top:14px; }
+.cast-section-title{ font-size:13px; font-weight:1000; margin-bottom:6px; color:#fff; }
+.cast-grid{ display:flex; gap:6px; overflow-x:auto; padding-bottom:4px; scrollbar-width:none; }
+.cast-grid::-webkit-scrollbar{ display:none; }
+.cast-card{
+  flex:0 0 68px; background:#121212; border-radius:8px; overflow:hidden; text-align:center; cursor:pointer;
+  border:1px solid rgba(255,255,255,.05);
+}
+.cast-img{ width:100%; height:82px; object-fit:cover; background:#0b1725; }
+.cast-name{ font-size:9px; font-weight:900; padding:3px 2px 2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.cast-popularity{ font-size:7px; color:#ffc400; font-weight:800; padding-bottom:3px; }
+
+/* =========================================================
+   SEASONS & EPISODES STYLING
+========================================================= */
+.seasons-episodes-section {
+  margin-top: 14px;
+  background: #121212;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 10px;
+  padding: 10px;
+}
+.seasons-list {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+  scrollbar-width: none;
+  margin-bottom: 8px;
+}
+.seasons-list::-webkit-scrollbar { display: none; }
+.season-btn {
+  flex: 0 0 auto;
+  background: #090909;
+  color: #ccc;
+  border: 1px solid rgba(255,255,255,.08);
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 900;
+  cursor: pointer;
+}
+.season-btn.active {
+  background: #e50914;
+  color: #fff;
+  border-color: transparent;
+}
+.episodes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  max-height: 200px;
+  overflow-y: auto;
+  padding-right: 4px;
+  scrollbar-width: thin;
+}
+.episode-btn {
+  background: #090909;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.06);
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 900;
+  text-align: right;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background .2s, border-color .2s;
+}
+.episode-btn:hover {
+  background: rgba(229,9,20,.15);
+  border-color: rgba(229,9,20,.4);
+}
+.episode-btn.active {
+  background: #e50914;
+  border-color: transparent;
+}
+
+/* =========================================================
+   COMMENTS SECTION
+========================================================= */
+.comments-section {
+  margin-top: 14px;
+  background: #121212;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 10px;
+  padding: 10px;
+}
+.comments-list {
+  max-height: 180px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.comment-item {
+  background: #090909;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,.05);
+}
+.comment-user {
+  font-size: 10px;
+  font-weight: 1000;
+  color: var(--primary);
+  margin-bottom: 2px;
+}
+.comment-text {
+  font-size: 11px;
+  color: #ddd;
+}
+.comment-input-box {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.comment-input-box input, .comment-input-box textarea {
+  width: 100%;
+  background: #050505;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 6px;
+  color: #fff;
+  padding: 6px 10px;
+  font-size: 11px;
+  outline: none;
+}
+.comment-input-box textarea {
+  min-height: 45px;
+  resize: vertical;
+}
+
+/* =========================================================
+   ACTOR MODAL
+========================================================= */
+.actor-modal{
+  position:fixed;
+  inset:0;
+  z-index:7000;
+  background:rgba(0,0,0,.9);
+  backdrop-filter:blur(15px);
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+  opacity:0;
+  visibility:hidden;
+  transition:.25s;
+}
+
+.actor-modal.active{ opacity:1; visibility:visible; }
+
+.actor-content{
+  width:100%;
+  max-width:900px;
+  height:min(85dvh, 100%);
+  max-height:85dvh;
+  overflow-y:auto;
+  background:#090909;
+  border-radius:18px 18px 0 0;
+  padding:14px 12px 24px;
+  transform:translateY(100%);
+  transition:transform .3s;
+}
+
+.actor-modal.active .actor-content{ transform:translateY(0); }
+
+.actor-profile-head{ display:flex; gap:10px; align-items:center; margin-bottom:12px; }
+.actor-profile-img{ width:75px; height:95px; border-radius:8px; object-fit:cover; border:2px solid #e50914; }
+.actor-profile-info h3{ font-size:16px; font-weight:1000; }
+.actor-profile-info p{ font-size:10px; color:#888; margin-top:3px; line-height:1.4; }
+
+/* =========================================================
+   PREMIUM PLAYER & SERVERS
+========================================================= */
+.video-container{
+  position:relative;
+  width:100%;
+  aspect-ratio:16/9;
+  overflow:hidden;
+  background:#000;
+  border-radius:8px;
+  margin-top:12px;
+  border:1px solid rgba(255,255,255,.1);
+}
+
+.video-container iframe{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  border:0;
+  display:block;
+  background:#000;
+}
+
+.servers-list{
+  margin-top:8px;
+  display:flex;
+  gap:5px;
+  overflow-x:auto;
+  padding:2px;
+  scrollbar-width:none;
+}
+
+.servers-list::-webkit-scrollbar{ display:none; }
+
+.server-btn{
+  flex:0 0 auto;
+  background:#121212;
+  color:#fff;
+  border:1px solid rgba(255,255,255,.08);
+  padding:6px 10px;
+  border-radius:6px;
+  font-size:10px;
+  font-weight:900;
+}
+
+.server-btn.active{
+  background:#e50914;
+  border-color:transparent;
+}
+
+.detail-actions{ display:flex; gap:8px; margin:10px 0; }
+.detail-actions .btn{ flex:1; }
+
+.btn{
+  min-height:40px;
+  padding:0 14px;
+  border-radius:8px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+  font-weight:1000;
+  font-size:12px;
+  transition:transform .2s;
+  cursor: pointer;
+}
+
+.btn:active{ transform:scale(.95); }
+.btn-primary{ background:#e50914; color:#fff; }
+.btn-secondary{ background:rgba(255,255,255,.08); color:#fff; border:1px solid rgba(255,255,255,.08); }
+.btn-vip{ background:linear-gradient(135deg, #ffcf33, #ff7800); color:#000; }
+
+/* =========================================================
+   VIP, OWNER & AI SECTIONS
+========================================================= */
+.vip-card{
+  background:#121212;
+  border:1px solid rgba(255,183,0,.3);
+  border-radius:14px;
+  padding:14px;
+  margin-top:8px;
+  text-align:center;
+}
+
+.vip-title{
+  font-size:18px;
+  font-weight:1000;
+  color:#ffc400;
+  margin-bottom:6px;
+}
+
+.vip-transfer-info{
+  background:#090909;
+  border:1px dashed rgba(255,183,0,.5);
+  padding:10px;
+  border-radius:8px;
+  margin:10px 0;
+  font-size:12px;
+  line-height:1.5;
+}
+
+.vip-transfer-number{
+  color:#e50914;
+  font-weight:1000;
+  font-size:15px;
+  display:block;
+  margin-top:4px;
+}
+
+.copy-btn{
+  background:rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.15);
+  color:#fff;
+  padding:4px 8px;
+  border-radius:6px;
+  font-size:10px;
+  font-weight:900;
+  margin-top:4px;
+  cursor:pointer;
+}
+
+.vip-plans{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:6px;
+  margin:10px 0;
+}
+
+.vip-plan{
+  background:#090909;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:6px;
+  padding:8px 4px;
+  cursor:pointer;
+}
+
+.vip-plan.selected{
+  border-color:#ffc400;
+  background:rgba(255,183,0,.08);
+}
+
+.vip-plan-name{ font-weight:900; font-size:10px; }
+.vip-plan-price{ color:#ffc400; font-weight:1000; font-size:13px; margin-top:3px; }
+
+.custom-file-upload{
+  display:inline-flex; align-items:center; justify-content:center; background:#181818;
+  color:#fff; padding:8px; border-radius:6px; font-weight:1000; font-size:11px; cursor:pointer;
+  border:1px solid rgba(255,255,255,.08); width:100%; margin-top:5px;
+}
+input[type="file"]{ display:none; }
+.file-name-display{ font-size:10px; color:#999; margin-top:3px; text-align:center; }
+
+.vip-upload-box input[type="text"], .vip-upload-box textarea, .owner-form-group input, .owner-form-group textarea, .owner-form-group select, .setting input{
+  width:100%; padding:8px 10px; background:#050505; border:1px solid rgba(255,255,255,.08); border-radius:6px; color:#fff; margin-top:5px; outline:none; font-size:12px;
+}
+.vip-upload-box textarea{ min-height:60px; resize:vertical; }
+
+.owner-dashboard{ background:#121212; border:1px solid rgba(229,9,20,.3); border-radius:14px; padding:14px; margin-top:8px; }
+.owner-tabs{ display:flex; gap:6px; overflow-x:auto; margin:10px 0; padding-bottom:4px; scrollbar-width:none; }
+.owner-tab-btn{ flex:0 0 auto; background:#090909; color:#999; border:1px solid rgba(255,255,255,.08); padding:6px 10px; border-radius:6px; font-weight:900; font-size:10px; }
+.owner-tab-btn.active{ background:#e50914; color:#fff; border-color:transparent; }
+.owner-tab-content{ display:none; }
+.owner-tab-content.active{ display:block; }
+.owner-stats-grid{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:6px; margin:8px 0; }
+.owner-stat-card{ background:#090909; border:1px solid rgba(255,255,255,.08); border-radius:8px; padding:8px; text-align:center; }
+.owner-stat-num{ font-size:15px; font-weight:1000; color:#e50914; margin-top:3px; }
+.owner-card-box{ background:#090909; border:1px solid rgba(255,255,255,.08); border-radius:10px; padding:10px; margin-bottom:8px; }
+.owner-form-group{ margin-bottom:8px; text-align:right; }
+.owner-form-group label{ font-weight:900; font-size:10px; color:#999; display:block; }
+
+.notifications-container { display: flex; flex-direction: column; gap: 8px; }
+.notification-card { background: #121212; border: 1px solid rgba(255,255,255,.08); border-radius: 8px; padding: 10px; position: relative; }
+.notification-title { font-weight: 1000; font-size: 12px; color: var(--gold); margin-bottom: 2px; }
+.notification-body { font-size: 11px; color: #ccc; }
+.notification-time { font-size: 9px; color: #777; margin-top: 4px; text-align: left; }
+.delete-notif-btn { position: absolute; top: 10px; left: 10px; background: rgba(229,9,20,.2); color: #e50914; border: 1px solid rgba(229,9,20,.4); padding: 2px 6px; border-radius: 4px; font-size: 9px; cursor: pointer; }
+
+.ai-box{ background:#121212; border:1px solid rgba(255,255,255,.08); border-radius:14px; padding:12px; }
+.ai-header{ display:flex; align-items:center; gap:8px; }
+.ai-icon{ width:36px; height:36px; border-radius:8px; background:url("giphy.gif") center/cover no-repeat; display:flex; align-items:center; justify-content:center; font-size:18px; }
+.ai-messages{ min-height:110px; max-height:260px; overflow:auto; padding:10px 0; }
+.message{ padding:8px 10px; border-radius:8px; margin-bottom:6px; max-width:90%; line-height:1.5; font-size:11px; }
+.message.ai{ background:#090909; margin-left:auto; border:1px solid rgba(255,255,255,.08); }
+.message.user{ background:#e50914; color:#fff; }
+.ai-input{ display:flex; gap:6px; }
+.ai-input input{ flex:1; height:40px; border:1px solid rgba(255,255,255,.08); background:#090909; color:#fff; border-radius:8px; outline:0; padding:0 10px; font-size:12px; }
+
+.settings-card{ background:#121212; border:1px solid rgba(255,255,255,.08); border-radius:14px; padding:12px; }
+.setting{ padding:8px 0; border-bottom:1px solid rgba(255,255,255,.08); }
+.setting:last-child{ border-bottom:0; }
+.setting label{ display:block; margin-bottom:4px; font-weight:900; font-size:11px; }
+
+.empty{ width:100%; padding:24px 15px; text-align:center; background:#121212; border-radius:10px; color:#999; font-size:11px; }
+.empty-icon{ font-size:28px; margin-bottom:4px; }
+
+.toast{
+  position:fixed; left:50%; bottom:calc(var(--bottom-height) + var(--safe-bottom) + 8px);
+  transform:translateX(-50%) translateY(15px); width:min(calc(100% - 20px), 360px);
+  background:rgba(18,18,18,.96); color:#fff; padding:8px 12px; border-radius:8px;
+  border:1px solid rgba(255,255,255,.1); box-shadow:0 8px 25px rgba(0,0,0,.5);
+  z-index:10000; opacity:0; visibility:hidden; transition:.25s; font-size:11px; font-weight:900; text-align:center;
+}
+.toast.show{ opacity:1; visibility:visible; transform:translateX(-50%) translateY(0); }
+
+/* =========================================================
+   BOTTOM NAV
+========================================================= */
+.bottom-nav{
+  position:fixed; right:0; left:0; bottom:0; height:calc(var(--bottom-height) + var(--safe-bottom));
+  padding-bottom:var(--safe-bottom); z-index:3000; background:#080808;
+  border-top:1px solid rgba(255,255,255,.06);
+  display:flex; justify-content:space-around; align-items:center;
+}
+.nav-item{
+  position:relative; width:20%; height:100%; color:#777; background:transparent;
+  display:flex; flex-direction:column; justify-content:center; align-items:center; gap:2px; font-size:10px; font-weight:900; cursor: pointer;
+}
+.nav-item svg { width:18px; height:18px; fill:currentColor; }
+.nav-item.active{ color:#e50914; }
+footer{ padding:15px 15px calc(60px + var(--safe-bottom)) !important; font-size:10px !important; text-align:center; color:#777; }
+
+@media(min-width:650px){
+  body{ padding-bottom:0; }
+  .bottom-nav{ display:none; }
+  .movie-grid{ display:grid; grid-template-columns:repeat(5, minmax(0,1fr)); overflow:visible; gap:10px; }
+  .movie-card{ width:100%; flex:unset; }
+}
+@media(min-width:1000px){
+  .movie-grid{ grid-template-columns:repeat(6, minmax(0,1fr)); }
+}
+</style>
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader" class="loader">
+  <div class="loader-box">
+    <div class="logo-loader"></div>
+    <div class="loader-text">جاري تحميل NEGM MOVIES...</div>
+    <div class="spinner"></div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-inner">
+    <div class="header-actions">
+      <button class="icon-btn" onclick="openSearch()" aria-label="بحث">
+        <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2.5" fill="none"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      </button>
+      <button class="icon-btn" onclick="showSection('notifications')" aria-label="الإشعارات" style="position:relative;">
+        🔔
+        <span id="notifBadgeDot" class="notification-badge-dot"></span>
+      </button>
+    </div>
+    <div class="logo" onclick="showSection('home')">
+      <div class="logo-icon"></div>
+      <div>NEGM <span>MOVIES</span></div>
+    </div>
+    <div class="header-actions">
+      <button class="icon-btn" onclick="openVipModal()" aria-label="VIP">👑</button>
+      <button class="icon-btn" onclick="checkOwnerAccess()" aria-label="لوحة المالك">⚙️</button>
+    </div>
+  </div>
+</header>
+
+<!-- SUB HEADER NAV -->
+<nav class="sub-header-nav">
+  <button onclick="showSection('movies')">الأفلام</button>
+  <button onclick="showSection('series')">المسلسلات</button>
+  <button onclick="showSection('trending')" class="ramadan-badge">🔥 Trending (الأكثر مشاهدة)</button>
+  <button onclick="showSection('home')" class="ramadan-badge">⭐ رمضان</button>
+</nav>
+
+<!-- SEARCH OVERLAY -->
+<div id="searchOverlay" class="search-overlay">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <input id="searchInput" class="search-input" type="search" placeholder="ابحث عن فيلم، مسلسل، أو ممثل..." autocomplete="off">
+      <button class="icon-btn" onclick="closeSearch()">✕</button>
+    </div>
+    <div id="searchResults" class="search-results"></div>
+  </div>
+</div>
+
+<!-- MAIN CONTAINER -->
+<main>
+  <!-- HOME SECTION -->
+  <div id="homeSection">
+    <section class="hero" id="hero">
+      <div class="hero-bg" id="heroBg"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="badge" id="heroBadge">جديد</div>
+        <h1 class="hero-title" id="heroTitle">اكتشف عالم الأفلام والمسلسلات</h1>
+        <p class="hero-description" id="heroDescription">ابحث عن آلاف الأفلام والمسلسلات واكتشف التقييمات والمعلومات والتصنيفات الحديثة.</p>
+        <div class="hero-buttons">
+          <button class="btn-larooza-play" id="heroButton">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            شاهد الآن
+          </button>
+          <button class="btn-larooza-secondary" onclick="showSection('movies')">
+            <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
+            تصفح القائمة
+          </button>
+        </div>
+        <div class="hero-pagination" id="heroPagination">
+          <div class="hero-pag-line active"></div>
+          <div class="hero-pag-line"></div>
+          <div class="hero-pag-line"></div>
+          <div class="hero-pag-line"></div>
+          <div class="hero-pag-line"></div>
+          <div class="hero-pag-line"></div>
+          <div class="hero-pag-line"></div>
+          <div class="hero-pag-line"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Circular Stories Row -->
+    <div id="storiesRow" class="stories-row"></div>
+
+    <div class="container">
+      <div class="section">
+        <div class="section-head">
+          <h2 class="section-title">أهم مسلسلات اليوم</h2>
+          <button class="view-all" onclick="showSection('series')">مشاهدة الكل ‹</button>
+        </div>
+        <div id="trendingSeries" class="movie-grid"></div>
+      </div>
+
+      <div class="section">
+        <div class="section-head">
+          <h2 class="section-title">الأفلام الرائجة</h2>
+          <button class="view-all" onclick="showSection('movies')">مشاهدة الكل ‹</button>
+        </div>
+        <div id="trendingMovies" class="movie-grid"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TRENDING SECTION -->
+  <div id="trendingSection" style="display:none;">
+    <div class="container">
+      <div class="section">
+        <div class="section-head"><h2 class="section-title">🔥 أكثر 10 أعمال مشاهدة خلال الأسبوع (Trending)</h2></div>
+        <div id="editorialTrendingGrid" class="movie-grid"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MOVIES SECTION -->
+  <div id="moviesSection" style="display:none;">
+    <div class="container">
+      <div class="section">
+        <div class="section-head"><h2 class="section-title">جميع الأفلام</h2></div>
+        <div id="moviesGrid" class="movie-grid"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERIES SECTION -->
+  <div id="seriesSection" style="display:none;">
+    <div class="container">
+      <div class="section">
+        <div class="section-head"><h2 class="section-title">جميع المسلسلات</h2></div>
+        <div id="seriesGrid" class="movie-grid"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAVORITES SECTION -->
+  <div id="favoritesSection" style="display:none;">
+    <div class="container">
+      <div class="section">
+        <div class="section-head"><h2 class="section-title">قائمتي المفضلة</h2></div>
+        <div id="favoritesGrid" class="movie-grid"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NOTIFICATIONS SECTION -->
+  <div id="notificationsSection" style="display:none;">
+    <div class="container">
+      <div class="section">
+        <div class="section-head"><h2 class="section-title">🔔 مركز الإشعارات</h2></div>
+        <div id="notificationsList" class="notifications-container">
+          <div class="empty"><div class="empty-icon">🔔</div>لا توجد إشعارات حالياً.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AI SECTION -->
+  <div id="aiSection" style="display:none;">
+    <div class="container">
+      <div class="section">
+        <div class="ai-box">
+          <div class="ai-header">
+            <div class="ai-icon"></div>
+            <div>
+              <div style="font-size:15px; font-weight:1000;">مساعد نيجم الذكي</div>
+              <div style="color:#999; font-size:10px; margin-top:2px;">اسأل واكتشف أفضل الأعمال</div>
+            </div>
+          </div>
+          <div id="aiMessages" class="ai-messages">
+            <div class="message ai">👋 أهلاً بك! اسألني عن أي فيلم أو مسلسل ترغب بمشاهدته.</div>
+          </div>
+          <div class="ai-input">
+            <input id="aiInput" placeholder="اكتب سؤالك هنا...">
+            <button class="btn btn-primary" onclick="askAI()">إرسال</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SETTINGS SECTION -->
+  <div id="settingsSection" style="display:none;">
+    <div class="container">
+      <div class="section">
+        <div class="settings-card">
+          <div class="setting">
+            <label>TMDB API Key</label>
+            <input id="tmdbInput" type="password" placeholder="ضع مفتاح TMDB هنا">
+          </div>
+          <div class="setting">
+            <label>OneSignal REST API Key (للإشعارات التلقائية واليدوية)</label>
+            <input id="oneSignalApiKeyInput" type="password" placeholder="ضع مفتاح OneSignal REST API هنا">
+          </div>
+          <button class="btn btn-primary" onclick="saveSettings()" style="width:100%;margin-top:10px">💾 حفظ الإعدادات</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VIP SECTION -->
+  <div id="vipSection" style="display:none;">
+    <div class="container">
+      <div class="section">
+        <div class="vip-card">
+          <div class="vip-title">👑 ترقية حسابك إلى VIP</div>
+          <p style="color:#999; font-size:11px; line-height:1.5;">احصل على محتوى مميز وبدون إعلانات وبسرعة فائقة.</p>
+          <div class="vip-transfer-info">
+            <span>أرسل المبلغ المطلوب على الرقم التالي:</span>
+            <span class="vip-transfer-number" id="phoneNumber">01206561893</span>
+            <button class="copy-btn" onclick="copyPhoneNumber()">📋 نسخ الرقم</button>
+          </div>
+          <div class="vip-plans">
+            <div class="vip-plan selected" onclick="selectVipPlan(this,'weekly','50 ج.م')">
+              <div class="vip-plan-name">أسبوعي</div>
+              <div class="vip-plan-price">50 ج.م</div>
+            </div>
+            <div class="vip-plan" onclick="selectVipPlan(this,'monthly','150 ج.م')">
+              <div class="vip-plan-name">شهري</div>
+              <div class="vip-plan-price">150 ج.م</div>
+            </div>
+            <div class="vip-plan" onclick="selectVipPlan(this,'yearly','1200 ج.م')">
+              <div class="vip-plan-name">سنوي</div>
+              <div class="vip-plan-price">1200 ج.م</div>
+            </div>
+          </div>
+          <div class="vip-upload-box">
+            <label>أرفق صورة إيصال الدفع:</label>
+            <label for="vipReceiptFile" class="custom-file-upload">اختر صورة الإيصال</label>
+            <input type="file" id="vipReceiptFile" accept="image/*" onchange="updateFileName(this)">
+            <div id="fileNameDisplay" class="file-name-display">لم يتم اختيار أي ملف</div>
+            <input type="text" id="vipSenderName" placeholder="اسمك الثلاثي أو رقم واتساب...">
+            <textarea id="vipReceiptText" placeholder="اكتب رقم الإيصال أو تفاصيل التحويل هنا..."></textarea>
+            <button class="btn btn-vip" onclick="submitVipRequest()" style="width:100%;margin-top:10px">🚀 إرسال وتفعيل الطلب</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OWNER SECTION -->
+  <div id="ownerSection" style="display:none;">
+    <div class="container">
+      <div class="section">
+        <div class="owner-dashboard">
+          <div class="vip-title">👑 لوحة تحكم المالك</div>
+          <div class="owner-tabs">
+            <button class="owner-tab-btn active" onclick="switchOwnerTab('dashboard',this)">1. الإحصائيات</button>
+            <button class="owner-tab-btn" onclick="switchOwnerTab('notifications',this)">2. مركز الإشعارات</button>
+            <button class="owner-tab-btn" onclick="switchOwnerTab('addmovie',this)">3. إضافة فيلم 🎬</button>
+            <button class="owner-tab-btn" onclick="switchOwnerTab('requests',this)">4. طلبات VIP</button>
+          </div>
+
+          <!-- TAB 1: DASHBOARD -->
+          <div id="owner-tab-dashboard" class="owner-tab-content active">
+            <div class="owner-card-box">
+              <h3 style="color:#e50914; margin-bottom:8px; font-size:13px;">إحصائيات مباشرة حقيقية</h3>
+              <div class="owner-stats-grid">
+                <div class="owner-stat-card"><div>الأجهزة المتصلة</div><div id="statDevices" class="owner-stat-num">0</div></div>
+                <div class="owner-stat-card"><div>طلبات VIP المعلقة</div><div id="statVipReqs" class="owner-stat-num">0</div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 2: NOTIFICATIONS CENTER -->
+          <div id="owner-tab-notifications" class="owner-tab-content">
+            <div class="owner-card-box">
+              <h3 style="color:#e50914; margin-bottom:8px; font-size:13px;">📢 مركز الإشعارات اليدوي والتلقائي</h3>
+              <div class="owner-form-group">
+                <label>عنوان الإشعار:</label>
+                <input type="text" id="notifTitleInput" placeholder="مثال: 🎬 فيلم جديد متاح الآن">
+              </div>
+              <div class="owner-form-group">
+                <label>نص الإشعار:</label>
+                <textarea id="notifBodyInput" placeholder="اكتب تفاصيل الإشعار هنا..."></textarea>
+              </div>
+              <div class="owner-form-group">
+                <label>🔗 رابط معرف الفيلم (Movie ID) للضغط والانتقال المباشر:</label>
+                <input type="text" id="notifMovieIdInput" placeholder="مثال: 550 أو اتركها فارغة">
+              </div>
+              <div class="owner-form-group">
+                <label>🖼️ رابط صورة الإعلان (Poster URL):</label>
+                <input type="text" id="notifImageInput" placeholder="رابط الصورة أو سيتم جلبها تلقائياً">
+              </div>
+              <div class="owner-form-group">
+                <label>🎯 المستهدف:</label>
+                <select id="notifTargetSelect">
+                  <option value="All">جميع المشتركين</option>
+                  <option value="vip">المشتركين VIP فقط</option>
+                </select>
+              </div>
+              <button class="btn btn-primary" onclick="sendCustomNotification()" style="width:100%;margin-top:6px">إرسال الإشعار عبر OneSignal فوراً 🚀</button>
+              <button class="btn btn-secondary" onclick="showSection('settings')" style="width:100%;margin-top:6px">⚙️ ضبط مفتاح OneSignal REST API</button>
+            </div>
+            
+            <div class="owner-card-box" style="margin-top:10px;">
+              <h3 style="color:#ffc400; margin-bottom:8px; font-size:13px;">📜 سجل الإشعارات المرسلة</h3>
+              <div id="ownerSentNotificationsList" style="display:flex; flex-direction:column; gap:6px; max-height:200px; overflow-y:auto;">
+                <div class="empty" style="padding:10px;">لا توجد إشعارات مسجلة.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 3: ADD MOVIE -->
+          <div id="owner-tab-addmovie" class="owner-tab-content">
+            <div class="owner-card-box">
+              <h3 style="color:#e50914; margin-bottom:8px; font-size:13px;">🎬 إضافة فيلم جديد وإرسال إشعار تلقائي</h3>
+              <div class="owner-form-group">
+                <label>عنوان الفيلم:</label>
+                <input type="text" id="newMovieTitle" placeholder="مثال: Avatar 3">
+              </div>
+              <div class="owner-form-group">
+                <label>رابط أو معرف الفيلم / البوستر (ID):</label>
+                <input type="text" id="newMoviePoster" placeholder="رابط صورة البوستر أو معرف TMDB">
+              </div>
+              <div class="owner-form-group">
+                <label>وصف الفيلم:</label>
+                <textarea id="newMovieDesc" placeholder="متاح الآن للمشاهدة بجودة عالية..."></textarea>
+              </div>
+              <button class="btn btn-primary" onclick="ownerAddNewMovie()" style="width:100%;margin-top:6px">حفظ الفيلم وإرسال الإشعار تلقائياً 🔥</button>
+            </div>
+          </div>
+
+          <!-- TAB 4: VIP REQUESTS -->
+          <div id="owner-tab-requests" class="owner-tab-content">
+            <div class="owner-card-box">
+              <h3 style="color:#e50914; margin-bottom:8px; font-size:13px;">طلبات اشتراك VIP الواردة</h3>
+              <div id="ownerVipRequestsList" style="display:flex; flex-direction:column; gap:6px;">
+                <div class="empty" style="padding:10px;">لا توجد طلبات جديدة.</div>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn btn-secondary" onclick="showSection('home')" style="width:100%;margin-top:10px">🏠 العودة للرئيسية</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- DETAILS MODAL -->
+<div id="detailsModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-cover" id="modalCover">
+      <button class="close-modal" onclick="closeModal()" aria-label="إغلاق">✕</button>
+    </div>
+    <div class="details">
+      <img id="modalPoster" class="details-poster" src="" alt="">
+      <h2 id="modalTitle" class="details-title"></h2>
+      <div id="modalMeta" class="details-meta"></div>
+      <p id="modalOverview" class="details-overview"></p>
+      
+      <!-- Share Link Box -->
+      <div style="margin-top:10px; background:#121212; padding:8px; border-radius:8px; display:flex; align-items:center; justify-content:space-between; border:1px solid rgba(255,255,255,.08);">
+        <span style="font-size:10px; color:#aaa;">🔗 رابط الفيلم المباشر:</span>
+        <button class="copy-btn" onclick="copyCurrentMovieLink()">نسخ الرابط</button>
+      </div>
+
+      <!-- Cast Section -->
+      <div class="cast-section">
+        <div class="cast-section-title">⭐ أبطال العمل وتقييمهم</div>
+        <div id="castGrid" class="cast-grid"></div>
+      </div>
+
+      <!-- Seasons & Episodes Section -->
+      <div id="seasonsEpisodesContainer" class="seasons-episodes-section" style="display:none;">
+        <div class="cast-section-title">📺 المواسم والحلقات</div>
+        <div id="seasonsList" class="seasons-list"></div>
+        <div id="episodesList" class="episodes-list"></div>
+      </div>
+
+      <!-- Video Player -->
+      <div class="video-container" id="videoContainer">
+        <iframe id="movie-player" src="" allowfullscreen scrolling="no" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"></iframe>
+      </div>
+      <div class="servers-list">
+        <button class="server-btn active" onclick="changeServer('vidsrc',this)">سيرفر 1</button>
+        <button class="server-btn" onclick="changeServer('vidsrc_me',this)">سيرفر 2</button>
+        <button class="server-btn" onclick="changeServer('superembed',this)">سيرفر 3</button>
+      </div>
+
+      <!-- Comments Section -->
+      <div class="comments-section">
+        <div class="cast-section-title">💬 تعليقات المشاهدين</div>
+        <div id="commentsList" class="comments-list">
+          <div style="font-size:10px; color:#777; text-align:center;">كن أول من يكتب تعليقاً!</div>
+        </div>
+        <div class="comment-input-box">
+          <input type="text" id="commentUserName" placeholder="اسمك الكريم...">
+          <textarea id="commentUserText" placeholder="اكتب تعليقك هنا..."></textarea>
+          <button class="btn btn-primary" onclick="submitComment()" style="width:100%;">إرسال التعليق</button>
+        </div>
+      </div>
+
+      <div class="detail-actions" style="margin-top:10px">
+        <button id="modalFavorite" class="btn btn-primary">♡ أضف لقائمتي</button>
+        <button class="btn btn-secondary" onclick="closeModal()">إغلاق</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ACTOR DETAILS MODAL -->
+<div id="actorModal" class="actor-modal">
+  <div class="actor-content">
+    <div style="display:flex; justify-content:flex-end; margin-bottom:6px;">
+      <button class="icon-btn" onclick="closeActorModal()">✕</button>
+    </div>
+    <div class="actor-profile-head">
+      <img id="actorImg" class="actor-profile-img" src="" alt="">
+      <div class="actor-profile-info">
+        <h3 id="actorName"></h3>
+        <p id="actorBio">جاري تحميل السيرة الذاتية...</p>
+      </div>
+    </div>
+    <div class="section-head" style="margin-top:12px;">
+      <h3 class="section-title" style="font-size:14px;">أفلام ومسلسلات الممثل</h3>
+    </div>
+    <div id="actorMoviesGrid" class="movie-grid"></div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div id="toast" class="toast"></div>
+
+<!-- BOTTOM NAV -->
+<nav class="bottom-nav">
+  <button class="nav-item active" data-section="home" onclick="showSection('home')">
+    <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+    <span>الرئيسية</span>
+  </button>
+  <button class="nav-item" data-section="movies" onclick="showSection('movies')">
+    <svg viewBox="0 0 24 24"><path d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-4z"/></svg>
+    <span>الأفلام</span>
+  </button>
+  <button class="nav-item" data-section="series" onclick="showSection('series')">
+    <svg viewBox="0 0 24 24"><path d="M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5v2h8v-2h5c1.1 0 1.99-.9 1.99-2L23 5c0-1.1-.9-2-2-2zm0 14H3V5h18v12z"/></svg>
+    <span>المسلسلات</span>
+  </button>
+  <button class="nav-item" data-section="ai" onclick="showSection('ai')">
+    <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14h-2v-2h2zm0-4h-2V7h2z"/></svg>
+    <span>الذكاء</span>
+  </button>
+  <button class="nav-item" data-section="favorites" onclick="showSection('favorites')">
+    <svg viewBox="0 0 24 24"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/></svg>
+    <span>المفضلة</span>
+  </button>
+</nav>
+
+<footer>
+  <div style="color:#e50914; font-weight:1000; margin-bottom:2px;">NEGM MOVIES VIP</div>
+  © 2026 NEGM MOVIES — جميع الحقوق محفوظة
+</footer>
+
+<script>
+const CONFIG = {
+  TMDB_API_KEY: "108786103b4b14c7a0880d768bc9f865",
+  TMDB_LANGUAGE: "ar-SA",
+  TMDB_IMAGE: "https://image.tmdb.org/t/p/w500",
+  TMDB_BACKDROP: "https://image.tmdb.org/t/p/original",
+  HUGGINGFACE_API_KEY: "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",
+  HUGGINGFACE_MODEL: "Qwen/Qwen2.5-7B-Instruct",
+  FIREBASE_URL: "https://negm-2fde0-default-rtdb.firebaseio.com/",
+  ONESIGNAL_APP_ID: "de1ce731-8984-412a-9d04-f04e9708263c",
+  ONESIGNAL_REST_API_KEY: "3c90c3cc-0d44-4b50-8888-8dd25736052a"
+};
+
+let currentItem = null;
+let favorites = [];
+let globalNotifications = [];
+let currentVipPlan = "weekly";
+let currentSection = "home";
+let isDetailsOpen = false;
+let isSearchOpen = false;
+let isActorOpen = false;
+let searchTimer = null;
+let sliderItems = [];
+let sliderIndex = 0;
+let sliderTimer = null;
+
+let currentSeason = 1;
+let currentEpisode = 1;
+let activeServerType = 'vidsrc';
+
+const loader = document.getElementById("loader");
+const heroBg = document.getElementById("heroBg");
+const heroTitle = document.getElementById("heroTitle");
+const heroDescription = document.getElementById("heroDescription");
+const heroButton = document.getElementById("heroButton");
+const heroBadge = document.getElementById("heroBadge");
+const detailsModal = document.getElementById("detailsModal");
+const searchOverlay = document.getElementById("searchOverlay");
+const actorModal = document.getElementById("actorModal");
+const moviePlayer = document.getElementById("movie-player");
+
+document.addEventListener("DOMContentLoaded", async function(){
+  loadSavedSettings();
+  await syncWithFirebase("load");
+  await loadHome();
+  
+  checkUrlForDirectMovie();
+
+  const searchInput = document.getElementById("searchInput");
+  if(searchInput){
+    searchInput.addEventListener("input", function(e){
+      clearTimeout(searchTimer);
+      const query = e.target.value.trim();
+      if(!query){
+        document.getElementById("searchResults").innerHTML = "";
+        return;
+      }
+      searchTimer = setTimeout(() => performSearch(query), 300);
+    });
+  }
+
+  setTimeout(function(){ loader.classList.add("hidden"); }, 500);
+});
+
+function loadSavedSettings(){
+  const savedTmdb = localStorage.getItem("negm_tmdb_key");
+  if(savedTmdb) CONFIG.TMDB_API_KEY = savedTmdb;
+  const savedOneSignalKey = localStorage.getItem("negm_onesignal_key");
+  if(savedOneSignalKey) CONFIG.ONESIGNAL_REST_API_KEY = savedOneSignalKey;
+  
+  const tmdbInput = document.getElementById("tmdbInput");
+  if(tmdbInput) tmdbInput.value = CONFIG.TMDB_API_KEY;
+  const oneSignalInput = document.getElementById("oneSignalApiKeyInput");
+  if(oneSignalInput) oneSignalInput.value = CONFIG.ONESIGNAL_REST_API_KEY;
+}
+
+function saveSettings(){
+  const tmdbVal = document.getElementById("tmdbInput").value.trim();
+  const oneSignalVal = document.getElementById("oneSignalApiKeyInput").value.trim();
+  if(tmdbVal) {
+    CONFIG.TMDB_API_KEY = tmdbVal;
+    localStorage.setItem("negm_tmdb_key", tmdbVal);
+  }
+  if(oneSignalVal) {
+    CONFIG.ONESIGNAL_REST_API_KEY = oneSignalVal;
+    localStorage.setItem("negm_onesignal_key", oneSignalVal);
+  }
+  showToast("✓ تم حفظ الإعدادات بنجاح");
+}
+
+function checkOwnerAccess(){
+  const password = prompt("أدخل كلمة مرور المالك:");
+  if (password === "2009") {
+    showSection('owner');
+  } else {
+    showSection('home');
+  }
+}
+
+async function syncWithFirebase(action){
+  const deviceId = localStorage.getItem("negm_device_id") || "device_" + Math.random().toString(36).substring(2, 9);
+  localStorage.setItem("negm_device_id", deviceId);
+  const url = `${CONFIG.FIREBASE_URL}/sessions/${deviceId}.json`;
+
+  if(action === "load"){
+    try{
+      const res = await fetch(url);
+      const data = await res.json();
+      if(data && data.favorites){
+        favorites = data.favorites;
+      } else {
+        favorites = JSON.parse(localStorage.getItem("negm_favorites") || "[]");
+      }
+      
+      await fetchGlobalData();
+    }catch(e){
+      favorites = JSON.parse(localStorage.getItem("negm_favorites") || "[]");
+    }
+  } else if(action === "save"){
+    localStorage.setItem("negm_favorites", JSON.stringify(favorites));
+    try{
+      await fetch(url, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ favorites: favorites, lastActive: new Date().toISOString() })
+      });
+    }catch(e){}
+  }
+}
+
+async function fetchGlobalData(){
+  try {
+    const notifRes = await fetch(`${CONFIG.FIREBASE_URL}/notifications.json`);
+    const notifData = await notifRes.json();
+    if(notifData) {
+      globalNotifications = Object.entries(notifData).map(([id, val]) => ({ id, ...val })).reverse();
+      renderNotifications();
+      renderOwnerSentNotifications();
+    }
+
+    const sessionsRes = await fetch(`${CONFIG.FIREBASE_URL}/sessions.json`);
+    const sessionsData = await sessionsRes.json();
+    if(sessionsData) {
+      const count = Object.keys(sessionsData).length;
+      const statDev = document.getElementById("statDevices");
+      if(statDev) statDev.textContent = count;
+    }
+
+    const vipRes = await fetch(`${CONFIG.FIREBASE_URL}/vip_requests.json`);
+    const vipData = await vipRes.json();
+    if(vipData) {
+      const vipList = Object.entries(vipData);
+      const statVip = document.getElementById("statVipReqs");
+      if(statVip) statVip.textContent = vipList.length;
+      renderOwnerVipRequests(vipList);
+    }
+  } catch(e) {}
+}
+
+async function checkUrlForDirectMovie(){
+  const params = new URLSearchParams(window.location.search);
+  const movieId = params.get("movie_id");
+  const mediaType = params.get("type") || "movie";
+  if(movieId){
+    const itemData = await tmdb(`/${mediaType}/${movieId}`);
+    if(itemData){
+      openDetails(itemData, mediaType);
+    }
+  }
+}
+
+async function tmdb(endpoint, params={}){
+  const apiKey = CONFIG.TMDB_API_KEY;
+  if(!apiKey) return null;
+  const url = new URL("https://api.themoviedb.org/3" + endpoint);
+  url.searchParams.set("api_key", apiKey);
+  url.searchParams.set("language", CONFIG.TMDB_LANGUAGE);
+  Object.entries(params).forEach(([key,value]) => url.searchParams.set(key, value));
+  try{
+    const response = await fetch(url);
+    if(!response.ok) return null;
+    return await response.json();
+  }catch(error){ return null; }
+}
+
+async function loadHome(){
+  const movies = await tmdb("/trending/movie/week");
+  const series = await tmdb("/trending/tv/week");
+  if(movies){
+    sliderItems = movies.results?.slice(0, 8) || [];
+    if(sliderItems.length) {
+      setHeroSlide(0);
+      startSliderTimer();
+    }
+    renderGrid(movies.results?.slice(0,10) || [], "trendingMovies");
+    renderStories(movies.results?.slice(0,12) || []);
+  }
+  if(series){
+    renderGrid(series.results?.slice(0,10) || [], "trendingSeries");
+  }
+}
+
+function setHeroSlide(index){
+  if(!sliderItems.length) return;
+  sliderIndex = index;
+  const item = sliderItems[index];
+  const type = item.media_type || "movie";
+  
+  heroBg.style.backgroundImage = item.backdrop_path ? `url("${CONFIG.TMDB_BACKDROP + item.backdrop_path}")` : "";
+  heroTitle.textContent = item.title || item.name || "فيلم";
+  heroDescription.textContent = item.overview || "اكتشف المزيد من المعلومات والتفاصيل.";
+  heroButton.onclick = function(){ openDetails(item, type); };
+  heroBadge.textContent = Number(item.vote_average || 0) > 7.5 ? "جديد ⭐" : "حصري";
+
+  const pagLines = document.querySelectorAll(".hero-pag-line");
+  pagLines.forEach((line, i) => {
+    line.classList.toggle("active", i === index);
+    line.onclick = () => {
+      clearInterval(sliderTimer);
+      setHeroSlide(i);
+      startSliderTimer();
+    };
+  });
+}
+
+function startSliderTimer(){
+  clearInterval(sliderTimer);
+  sliderTimer = setInterval(() => {
+    let nextIndex = (sliderIndex + 1) % sliderItems.length;
+    setHeroSlide(nextIndex);
+  }, 4000);
+}
+
+function renderStories(items){
+  const container = document.getElementById("storiesRow");
+  if(!container) return;
+  container.innerHTML = "";
+  items.forEach(item => {
+    const type = item.media_type || "movie";
+    const title = item.title || item.name || "";
+    const poster = item.poster_path ? CONFIG.TMDB_IMAGE + item.poster_path : "";
+    const div = document.createElement("div");
+    div.className = "story-item";
+    div.innerHTML = `
+      <div class="story-ring">
+        ${poster ? `<img src="${poster}" class="story-img" loading="lazy">` : `<div class="story-img" style="background:#111;"></div>`}
+        <div class="story-badge">جديد</div>
+      </div>
+      <div class="story-title">${escapeHtml(title)}</div>
+    `;
+    div.onclick = () => openDetails(item, type);
+    container.appendChild(div);
+  });
+}
+
+function renderGrid(items, containerId){
+  const container = document.getElementById(containerId);
+  if(!container) return;
+  container.innerHTML = "";
+  if(!items || !items.length){
+    container.innerHTML = `<div class="empty"><div class="empty-icon">🎬</div>لا توجد نتائج.</div>`;
+    return;
+  }
+  items.forEach(function(item){
+    const type = item.media_type || (item.first_air_date ? "tv" : "movie");
+    container.appendChild(createMovieCard(item, type));
+  });
+}
+
+function createMovieCard(item, type){
+  const card = document.createElement("article");
+  card.className = "movie-card";
+  const title = item.title || item.name || "بدون عنوان";
+  const poster = item.poster_path ? CONFIG.TMDB_IMAGE + item.poster_path : "";
+  const rating = Number(item.vote_average || 0).toFixed(1);
+  card.innerHTML = `
+    <div class="poster">
+      ${poster ? `<img src="${poster}" alt="" loading="lazy">` : `<div style="display:flex;align-items:center;justify-content:center;height:100%;color:#667;font-size:25px;">🎬</div>`}
+      <div class="poster-gradient"></div>
+      <div class="rating">★ ${rating}</div>
+      <div class="type-label">${type === "tv" ? "مسلسل" : "فيلم"}</div>
+    </div>
+    <div class="card-info">
+      <div class="card-title">${escapeHtml(title)}</div>
+    </div>
+  `;
+  card.onclick = function(){ openDetails(item, type); };
+  return card;
+}
+
+async function openDetails(item, type){
+  if(!item) return;
+  currentItem = { ...item, media_type: type };
+  const poster = item.poster_path ? CONFIG.TMDB_IMAGE + item.poster_path : "";
+  const backdrop = item.backdrop_path ? CONFIG.TMDB_BACKDROP + item.backdrop_path : poster;
+  
+  document.getElementById("modalCover").style.backgroundImage = `url("${backdrop}")`;
+  document.getElementById("modalPoster").src = poster;
+  document.getElementById("modalTitle").textContent = item.title || item.name || "بدون عنوان";
+  document.getElementById("modalOverview").textContent = item.overview || "لا توجد نبذة متاحة.";
+  document.getElementById("modalMeta").innerHTML = `<span>${item.release_date || item.first_air_date || "—"}</span><span>•</span><span>⭐ ${Number(item.vote_average || 0).toFixed(1)}</span><span>•</span><span>${type === "tv" ? "مسلسل" : "فيلم"}</span>`;
+  
+  currentSeason = 1;
+  currentEpisode = 1;
+  activeServerType = 'vidsrc';
+
+  const seasonsEpisodesContainer = document.getElementById("seasonsEpisodesContainer");
+  if(type === "tv") {
+    seasonsEpisodesContainer.style.display = "block";
+    await loadTvSeasonsAndEpisodes(item.id);
+  } else {
+    seasonsEpisodesContainer.style.display = "none";
+  }
+
+  setPlayer(activeServerType);
+  updateFavoriteButton();
+  loadCast(item.id, type);
+  loadComments(item.id);
+
+  detailsModal.classList.add("active");
+  document.body.style.overflow = "hidden";
+  isDetailsOpen = true;
+  
+  const newUrl = `${window.location.origin}${window.location.pathname}?movie_id=${item.id}&type=${type}`;
+  window.history.replaceState({movieId: item.id}, "", newUrl);
+  history.pushState(null, "", window.location.href);
+
+  // جدولة إشعار خارجي بعد 10 دقائق من تشغيل الفيلم
+  scheduleBackgroundNotification(item.title || item.name || "العمل الجديد");
+}
+
+function scheduleBackgroundNotification(movieTitle) {
+  setTimeout(async () => {
+    if (document.hidden && "Notification" in window && Notification.permission === "granted") {
+      new Notification("منورنا في عالم الأفلام", {
+        body: `لا تفوت متابعة ${movieTitle} بجودة عالية الآن على نيجم موفيز!`,
+        icon: "giphy.gif"
+      });
+    }
+  }, 10 * 60 * 1000);
+}
+
+function copyCurrentMovieLink() {
+  if(!currentItem) return;
+  const link = `${window.location.origin}${window.location.pathname}?movie_id=${currentItem.id}&type=${currentItem.media_type || 'movie'}`;
+  navigator.clipboard.writeText(link).then(() => {
+    showToast("🔗 تم نسخ رابط الفيلم بنجاح!");
+  });
+}
+
+async function loadTvSeasonsAndEpisodes(tvId){
+  const seasonsList = document.getElementById("seasonsList");
+  const episodesList = document.getElementById("episodesList");
+  seasonsList.innerHTML = `<span style="color:#999;font-size:10px;">جاري تحميل المواسم...</span>`;
+  episodesList.innerHTML = "";
+
+  const tvDetails = await tmdb(`/tv/${tvId}`);
+  if(!tvDetails || !tvDetails.seasons) {
+    seasonsList.innerHTML = `<span style="color:#999;font-size:10px;">لا توجد مواسم متاحة.</span>`;
+    return;
+  }
+
+  const validSeasons = tvDetails.seasons.filter(s => s.season_number >= 0);
+  seasonsList.innerHTML = "";
+
+  validSeasons.forEach(season => {
+    const btn = document.createElement("button");
+    btn.className = `season-btn ${season.season_number === currentSeason ? "active" : ""}`;
+    btn.textContent = season.name || `الموسم ${season.season_number}`;
+    btn.onclick = () => {
+      document.querySelectorAll(".season-btn").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      currentSeason = season.season_number;
+      loadEpisodesForSeason(tvId, currentSeason);
+    };
+    seasonsList.appendChild(btn);
+  });
+
+  if(validSeasons.length > 0) {
+    currentSeason = validSeasons[0].season_number;
+    loadEpisodesForSeason(tvId, currentSeason);
+  }
+}
+
+async function loadEpisodesForSeason(tvId, seasonNum){
+  const episodesList = document.getElementById("episodesList");
+  episodesList.innerHTML = `<span style="color:#999;font-size:10px;padding:4px;">جاري تحميل الحلقات...</span>`;
+
+  const seasonData = await tmdb(`/tv/${tvId}/season/${seasonNum}`);
+  if(!seasonData || !seasonData.episodes || !seasonData.episodes.length){
+    episodesList.innerHTML = `<span style="color:#999;font-size:10px;padding:4px;">لا توجد حلقات متاحة لهذا الموسم.</span>`;
+    return;
+  }
+
+  episodesList.innerHTML = "";
+  seasonData.episodes.forEach(ep => {
+    const epBtn = document.createElement("button");
+    epBtn.className = `episode-btn ${ep.episode_number === currentEpisode ? "active" : ""}`;
+    epBtn.innerHTML = `<span>الحلقة ${ep.episode_number}: ${escapeHtml(ep.name || 'بدون عنوان')}</span> <span style="font-size:9px;color:#aaa;">⏱ ${ep.runtime ? ep.runtime + ' دقيقة' : ''}</span>`;
+    epBtn.onclick = () => {
+      document.querySelectorAll(".episode-btn").forEach(b => b.classList.remove("active"));
+      epBtn.classList.add("active");
+      currentEpisode = ep.episode_number;
+      setPlayer(activeServerType);
+    };
+    episodesList.appendChild(epBtn);
+  });
+}
+
+function setPlayer(serverType){
+  if(!currentItem) return;
+  activeServerType = serverType;
+  const id = currentItem.id;
+  const type = currentItem.media_type || "movie";
+  let url = "";
+
+  if(serverType === 'vidsrc'){
+    if(type === 'tv') url = `https://vidsrc.me/embed/tv?tmdb=${id}&season=${currentSeason}&episode=${currentEpisode}`;
+    else url = `https://vidsrc.me/embed/movie?tmdb=${id}`;
+  } else if(serverType === 'vidsrc_me'){
+    if(type === 'tv') url = `https://vidsrc.to/embed/tv/${id}/${currentSeason}/${currentEpisode}`;
+    else url = `https://vidsrc.to/embed/movie/${id}`;
+  } else if(serverType === 'superembed'){
+    if(type === 'tv') url = `https://multiembed.mov/?video_id=${id}&tmdb=1&s=${currentSeason}&e=${currentEpisode}`;
+    else url = `https://multiembed.mov/?video_id=${id}&tmdb=1`;
+  }
+  moviePlayer.src = url;
+}
+
+function changeServer(serverType, btn){
+  document.querySelectorAll(".server-btn").forEach(b => b.classList.remove("active"));
+  btn.classList.add("active");
+  setPlayer(serverType);
+}
+
+async function loadCast(id, type){
+  const castGrid = document.getElementById("castGrid");
+  castGrid.innerHTML = `<div style="color:#999;font-size:10px;">جاري تحميل الأبطال...</div>`;
+  const data = await tmdb(`/${type}/${id}/credits`);
+  if(!data || !data.cast || !data.cast.length){
+    castGrid.innerHTML = `<div style="color:#999;font-size:10px;">لا توجد معلومات.</div>`;
+    return;
+  }
+  castGrid.innerHTML = "";
+  data.cast.slice(0, 15).forEach(actor => {
+    const actorCard = document.createElement("div");
+    actorCard.className = "cast-card";
+    const profileImg = actor.profile_path ? CONFIG.TMDB_IMAGE + actor.profile_path : "";
+    const pop = Number(actor.popularity || 0).toFixed(0);
+    actorCard.innerHTML = `
+      ${profileImg ? `<img src="${profileImg}" class="cast-img" loading="lazy">` : `<div class="cast-img" style="display:flex;align-items:center;justify-content:center;color:#555;">👤</div>`}
+      <div class="cast-name">${escapeHtml(actor.name)}</div>
+      <div class="cast-popularity">🔥 ${pop}</div>
+    `;
+    actorCard.onclick = () => openActorModal(actor);
+    castGrid.appendChild(actorCard);
+  });
+}
+
+async function loadComments(movieId){
+  const commentsList = document.getElementById("commentsList");
+  commentsList.innerHTML = `<div style="font-size:10px; color:#777; text-align:center;">جاري تحميل التعليقات...</div>`;
+  try {
+    const res = await fetch(`${CONFIG.FIREBASE_URL}/comments/${movieId}.json`);
+    const data = await res.json();
+    if(!data) {
+      commentsList.innerHTML = `<div style="font-size:10px; color:#777; text-align:center;">كن أول من يكتب تعليقاً!</div>`;
+      return;
+    }
+    commentsList.innerHTML = "";
+    Object.values(data).reverse().forEach(comm => {
+      const div = document.createElement("div");
+      div.className = "comment-item";
+      div.innerHTML = `
+        <div class="comment-user">${escapeHtml(comm.name)}</div>
+        <div class="comment-text">${escapeHtml(comm.text)}</div>
+      `;
+      commentsList.appendChild(div);
+    });
+  } catch(e) {
+    commentsList.innerHTML = `<div style="font-size:10px; color:#777; text-align:center;">تعذر تحميل التعليقات.</div>`;
+  }
+}
+
+async function submitComment(){
+  if(!currentItem) return;
+  const nameInput = document.getElementById("commentUserName");
+  const textInput = document.getElementById("commentUserText");
+  const name = nameInput.value.trim() || "مستخدم زائر";
+  const text = textInput.value.trim();
+  if(!text) {
+    showToast("يرجى كتابة نص التعليق أولاً");
+    return;
+  }
+  
+  const commentObj = { name, text, time: new Date().toISOString() };
+  try {
+    await fetch(`${CONFIG.FIREBASE_URL}/comments/${currentItem.id}.json`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(commentObj)
+    });
+    textInput.value = "";
+    showToast("✓ تم إضافة تعليقك بنجاح");
+    loadComments(currentItem.id);
+  } catch(e) {
+    showToast("حدث خطأ أثناء إرسال التعليق");
+  }
+}
+
+async function openActorModal(actor){
+  document.getElementById("actorName").textContent = actor.name;
+  document.getElementById("actorImg").src = actor.profile_path ? CONFIG.TMDB_IMAGE + actor.profile_path : "";
+  document.getElementById("actorBio").textContent = "جاري جلب الأعمال...";
+  document.getElementById("actorMoviesGrid").innerHTML = "";
+  
+  actorModal.classList.add("active");
+  isActorOpen = true;
+  history.pushState(null, "", window.location.href);
+
+  const details = await tmdb(`/person/${actor.id}`);
+  if(details){
+    document.getElementById("actorBio").textContent = details.biography || "لا توجد سيرة ذاتية متاحة.";
+  }
+
+  const credits = await tmdb(`/person/${actor.id}/combined_credits`);
+  if(credits && credits.cast){
+    const sorted = credits.cast.sort((a,b) => (b.popularity || 0) - (a.popularity || 0));
+    renderActorGrid(sorted.slice(0, 15), "actorMoviesGrid");
+  }
+}
+
+function renderActorGrid(items, containerId){
+  const container = document.getElementById(containerId);
+  if(!container) return;
+  container.innerHTML = "";
+  if(!items || !items.length){
+    container.innerHTML = `<div class="empty"><div class="empty-icon">🎬</div>لا توجد أعمال.</div>`;
+    return;
+  }
+  items.forEach(function(item){
+    const type = item.media_type || (item.first_air_date ? "tv" : "movie");
+    const card = document.createElement("article");
+    card.className = "movie-card";
+    const title = item.title || item.name || "بدون عنوان";
+    const poster = item.poster_path ? CONFIG.TMDB_IMAGE + item.poster_path : "";
+    const rating = Number(item.vote_average || 0).toFixed(1);
+    card.innerHTML = `
+      <div class="poster">
+        ${poster ? `<img src="${poster}" alt="" loading="lazy">` : `<div style="display:flex;align-items:center;justify-content:center;height:100%;color:#667;font-size:25px;">🎬</div>`}
+        <div class="poster-gradient"></div>
+        <div class="rating">★ ${rating}</div>
+        <div class="type-label">${type === "tv" ? "مسلسل" : "فيلم"}</div>
+      </div>
+      <div class="card-info">
+        <div class="card-title">${escapeHtml(title)}</div>
+      </div>
+    `;
+    card.onclick = function(){
+      closeActorModal();
+      openDetails(item, type);
+    };
+    container.appendChild(card);
+  });
+}
+
+function closeActorModal(){
+  actorModal.classList.remove("active");
+  isActorOpen = false;
+  moviePlayer.src = "";
+}
+
+function closeModal(){
+  detailsModal.classList.remove("active");
+  isDetailsOpen = false;
+  moviePlayer.src = "";
+  window.history.replaceState({}, "", window.location.pathname);
+}
+
+function closeSearch(){
+  searchOverlay.classList.remove("active");
+  isSearchOpen = false;
+}
+
+function openSearch(){
+  searchOverlay.classList.add("active");
+  isSearchOpen = true;
+  document.getElementById("searchInput").focus();
+}
+
+async function performSearch(query){
+  const resultsContainer = document.getElementById("searchResults");
+  resultsContainer.innerHTML = `<div style="text-align:center;color:#888;padding:15px;font-size:11px;">جاري البحث...</div>`;
+  const data = await tmdb("/search/multi", { query: query });
+  if(!data || !data.results || !data.results.length){
+    resultsContainer.innerHTML = `<div class="empty"><div class="empty-icon">🔍</div>لا توجد نتائج مطابقة.</div>`;
+    return;
+  }
+  resultsContainer.innerHTML = "";
+  const grid = document.createElement("div");
+  grid.className = "movie-grid";
+  data.results.forEach(item => {
+    if(item.media_type === "movie" || item.media_type === "tv" || item.media_type === "person"){
+      const card = document.createElement("article");
+      card.className = "movie-card";
+      const title = item.title || item.name || "بدون عنوان";
+      const poster = item.poster_path ? CONFIG.TMDB_IMAGE + item.poster_path : (item.profile_path ? CONFIG.TMDB_IMAGE + item.profile_path : "");
+      card.innerHTML = `
+        <div class="poster">
+          ${poster ? `<img src="${poster}" alt="" loading="lazy">` : `<div style="display:flex;align-items:center;justify-content:center;height:100%;color:#667;font-size:25px;">🎬</div>`}
+          <div class="poster-gradient"></div>
+          <div class="type-label">${item.media_type === "tv" ? "مسلسل" : (item.media_type === "person" ? "ممثل" : "فيلم")}</div>
+        </div>
+        <div class="card-info">
+          <div class="card-title">${escapeHtml(title)}</div>
+        </div>
+      `;
+      card.onclick = () => {
+        closeSearch();
+        if(item.media_type === "person"){
+          openActorModal(item);
+        } else {
+          openDetails(item, item.media_type);
+        }
+      };
+      grid.appendChild(card);
+    }
+  });
+  resultsContainer.appendChild(grid);
+}
+
+async function showSection(sectionId){
+  currentSection = sectionId;
+  const sections = ['home', 'trending', 'movies', 'series', 'favorites', 'notifications', 'ai', 'settings', 'vip', 'owner'];
+  sections.forEach(sec => {
+    const el = document.getElementById(sec + "Section");
+    if(el) el.style.display = (sec === sectionId) ? "block" : "none";
+  });
+
+  document.querySelectorAll(".nav-item").forEach(btn => {
+    btn.classList.toggle("active", btn.getAttribute("data-section") === sectionId);
+  });
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  if(sectionId === 'movies'){
+    const data = await tmdb("/discover/movie", { sort_by: "popularity.desc" });
+    if(data) renderGrid(data.results, "moviesGrid");
+  } else if(sectionId === 'series'){
+    const data = await tmdb("/discover/tv", { sort_by: "popularity.desc" });
+    if(data) renderGrid(data.results, "seriesGrid");
+  } else if(sectionId === 'trending'){
+    const data = await tmdb("/trending/all/week");
+    if(data) renderGrid(data.results, "editorialTrendingGrid");
+  } else if(sectionId === 'favorites'){
+    renderFavorites();
+  } else if(sectionId === 'notifications'){
+    renderNotifications();
+    markNotificationsRead();
+  }
+}
+
+function updateFavoriteButton(){
+  const btn = document.getElementById("modalFavorite");
+  if(!currentItem) return;
+  const exists = favorites.some(f => f.id === currentItem.id);
+  btn.textContent = exists ? "♥ إزالة من المفضلة" : "♡ أضف لقائمتي";
+  btn.onclick = async () => {
+    if(exists){
+      favorites = favorites.filter(f => f.id !== currentItem.id);
+      showToast("✓ تم الحذف من المفضلة");
+    } else {
+      favorites.push(currentItem);
+      showToast("✓ تم الإضافة للمفضلة");
+    }
+    updateFavoriteButton();
+    await syncWithFirebase("save");
+  };
+}
+
+function renderFavorites(){
+  renderGrid(favorites, "favoritesGrid");
+}
+
+function renderNotifications(){
+  const container = document.getElementById("notificationsList");
+  if(!container) return;
+  if(!globalNotifications.length){
+    container.innerHTML = `<div class="empty"><div class="empty-icon">🔔</div>لا توجد إشعارات حالياً.</div>`;
+    return;
+  }
+  container.innerHTML = "";
+  globalNotifications.forEach(notif => {
+    const card = document.createElement("div");
+    card.className = "notification-card";
+    card.innerHTML = `
+      <button class="delete-notif-btn" onclick="deleteNotification('${notif.id}')">حذف</button>
+      ${notif.imageUrl ? `<img src="${notif.imageUrl}" style="width:100%;height:120px;object-fit:cover;border-radius:6px;margin-bottom:6px;">` : ''}
+      <div class="notification-title">${escapeHtml(notif.title)}</div>
+      <div class="notification-body">${escapeHtml(notif.body)}</div>
+      <div class="notification-time">${new Date(notif.time).toLocaleString('ar-EG')}</div>
+      ${notif.movieId ? `<button class="btn btn-primary" onclick="openNotificationMovie('${notif.movieId}', '${notif.mediaType || 'movie'}')" style="margin-top:6px;font-size:10px;padding:4px 10px;width:100%;">🎬 مشاهدة الفيلم الآن</button>` : ''}
+    `;
+    container.appendChild(card);
+  });
+}
+
+async function deleteNotification(id){
+  try {
+    await fetch(`${CONFIG.FIREBASE_URL}/notifications/${id}.json`, { method: "DELETE" });
+    showToast("✓ تم حذف الإشعار");
+    fetchGlobalData();
+  } catch(e) {
+    showToast("حدث خطأ أثناء الحذف");
+  }
+}
+
+async function openNotificationMovie(movieId, mediaType){
+  const itemData = await tmdb(`/${mediaType}/${movieId}`);
+  if(itemData){
+    openDetails(itemData, mediaType);
+  } else {
+    showToast("عذراً، لم يتم العثور على تفاصيل الفيلم");
+  }
+}
+
+function markNotificationsRead(){
+  const dot = document.getElementById("notifBadgeDot");
+  if(dot) dot.style.display = "none";
+}
+
+async function askAI(){
+  const input = document.getElementById("aiInput");
+  const messages = document.getElementById("aiMessages");
+  const query = input.value.trim();
+  if(!query) return;
+
+  const userDiv = document.createElement("div");
+  userDiv.className = "message user";
+  userDiv.textContent = query;
+  messages.appendChild(userDiv);
+  input.value = "";
+  messages.scrollTop = messages.scrollHeight;
+
+  const aiDiv = document.createElement("div");
+  aiDiv.className = "message ai";
+  aiDiv.textContent = "جاري التفكير...";
+  messages.appendChild(aiDiv);
+  messages.scrollTop = messages.scrollHeight;
+
+  try {
+    const res = await fetch(`https://api-inference.huggingface.co/models/${CONFIG.HUGGINGFACE_MODEL}`, {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${CONFIG.HUGGINGFACE_API_KEY}`,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        inputs: `أنت مساعد ذكي لمنصة أفلام اسمها NEGM MOVIES VIP. أجب باختصار واحترافية باللغة العربية على سؤال المستخدم: ${query}`,
+        parameters: { max_new_tokens: 150, temperature: 0.7 }
+      })
+    });
+    const data = await res.json();
+    let reply = "أهلاً بك! يمكنك تصفح قسم الأفلام والمسلسلات لاختيار ما يناسبك.";
+    if(Array.isArray(data) && data[0]?.generated_text){
+      reply = data[0].generated_text;
+    } else if(data?.generated_text){
+      reply = data.generated_text;
+    }
+    aiDiv.textContent = reply;
+  } catch(e) {
+    aiDiv.textContent = "عذراً، حدث خطأ في الرد. يجدر بك تصفح قسم الأفلام والمسلسلات.";
+  }
+  messages.scrollTop = messages.scrollHeight;
+}
+
+function openVipModal(){
+  showSection('vip');
+}
+
+function selectVipPlan(element, planKey, price){
+  document.querySelectorAll(".vip-plan").forEach(p => p.classList.remove("selected"));
+  element.classList.add("selected");
+  currentVipPlan = planKey;
+}
+
+function copyPhoneNumber(){
+  const phone = document.getElementById("phoneNumber").textContent;
+  navigator.clipboard.writeText(phone).then(() => {
+    showToast("✓ تم نسخ رقم التحويل بنجاح");
+  });
+}
+
+function updateFileName(input){
+  const display = document.getElementById("fileNameDisplay");
+  if(input.files && input.files[0]){
+    display.textContent = input.files[0].name;
+  } else {
+    display.textContent = "لم يتم اختيار أي ملف";
+  }
+}
+
+async function submitVipRequest(){
+  const senderName = document.getElementById("vipSenderName").value.trim();
+  const receiptText = document.getElementById("vipReceiptText").value.trim();
+  const fileInput = document.getElementById("vipReceiptFile");
+
+  if(!senderName) {
+    showToast("يرجى إدخال اسمك أو رقم واتساب");
+    return;
+  }
+
+  let receiptImage = "";
+  if(fileInput.files && fileInput.files[0]){
+    receiptImage = fileInput.files[0].name;
+  }
+
+  const reqData = {
+    plan: currentVipPlan,
+    senderName,
+    receiptText,
+    receiptImage,
+    time: new Date().toISOString(),
+    status: "pending"
+  };
+
+  try {
+    await fetch(`${CONFIG.FIREBASE_URL}/vip_requests.json`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(reqData)
+    });
+    showToast("✓ تم إرسال طلب اشتراك VIP بنجاح! سيتم المراجعة والتفعيل قريباً");
+    document.getElementById("vipSenderName").value = "";
+    document.getElementById("vipReceiptText").value = "";
+    document.getElementById("fileNameDisplay").textContent = "لم يتم اختيار أي ملف";
+    showSection('home');
+  } catch(e) {
+    showToast("حدث خطأ أثناء إرسال الطلب");
+  }
+}
+
+function switchOwnerTab(tabName, btn){
+  document.querySelectorAll(".owner-tab-btn").forEach(b => b.classList.remove("active"));
+  document.querySelectorAll(".owner-tab-content").forEach(c => c.classList.remove("active"));
+  btn.classList.add("active");
+  const content = document.getElementById(`owner-tab-${tabName}`);
+  if(content) content.classList.add("active");
+  if(tabName === 'dashboard' || tabName === 'notifications' || tabName === 'requests'){
+    fetchGlobalData();
+  }
+}
+
+function renderOwnerVipRequests(requestsArray){
+  const container = document.getElementById("ownerVipRequestsList");
+  if(!container) return;
+  if(!requestsArray.length){
+    container.innerHTML = `<div class="empty" style="padding:10px;">لا توجد طلبات جديدة.</div>`;
+    return;
+  }
+  container.innerHTML = "";
+  requestsArray.forEach(([key, req]) => {
+    const card = document.createElement("div");
+    card.className = "notification-card";
+    card.innerHTML = `
+      <div class="notification-title">👤 ${escapeHtml(req.senderName)} (${req.plan})</div>
+      <div class="notification-body">تفاصيل: ${escapeHtml(req.receiptText || 'بدون تفاصيل')} | صورة: ${req.receiptImage || 'لا يوجد'}</div>
+      <div class="notification-time">${new Date(req.time).toLocaleString('ar-EG')}</div>
+      <button class="btn btn-primary" onclick="approveVipRequest('${key}')" style="margin-top:6px;font-size:10px;padding:4px 10px;">✓ موافقة وتفعيل VIP</button>
+    `;
+    container.appendChild(card);
+  });
+}
+
+async function approveVipRequest(key){
+  try {
+    await fetch(`${CONFIG.FIREBASE_URL}/vip_requests/${key}.json`, { method: "DELETE" });
+    showToast("✓ تم تفعيل اشتراك VIP بنجاح");
+    fetchGlobalData();
+  } catch(e) {
+    showToast("حدث خطأ أثناء التفعيل");
+  }
+}
+
+async function sendCustomNotification(){
+  const title = document.getElementById("notifTitleInput").value.trim();
+  const body = document.getElementById("notifBodyInput").value.trim();
+  const movieId = document.getElementById("notifMovieIdInput").value.trim();
+  let imageUrl = document.getElementById("notifImageInput").value.trim();
+  const target = document.getElementById("notifTargetSelect").value;
+
+  if(!title || !body){
+    showToast("يرجى إدخال عنوان ونَص الإشعار");
+    return;
+  }
+
+  if (movieId && !imageUrl) {
+    const movieData = await tmdb(`/movie/${movieId}`);
+    if (movieData && movieData.poster_path) {
+      imageUrl = CONFIG.TMDB_IMAGE + movieData.poster_path;
+    }
+  }
+
+  const notifObj = { title, body, movieId, imageUrl, target, time: new Date().toISOString() };
+  try {
+    await fetch(`${CONFIG.FIREBASE_URL}/notifications.json`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(notifObj)
+    });
+
+    if(CONFIG.ONESIGNAL_REST_API_KEY){
+      await fetch("https://api.onesignal.com/notifications", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Key ${CONFIG.ONESIGNAL_REST_API_KEY}`
+        },
+        body: JSON.stringify({
+          app_id: CONFIG.ONESIGNAL_APP_ID,
+          headings: { en: title, ar: title },
+          contents: { en: body, ar: body },
+          big_picture: imageUrl || undefined,
+          included_segments: [target === "vip" ? "VIP" : "All"]
+        })
+      });
+    }
+
+    showToast("✓ تم إرسال الإشعار بنجاح");
+    document.getElementById("notifTitleInput").value = "";
+    document.getElementById("notifBodyInput").value = "";
+    document.getElementById("notifMovieIdInput").value = "";
+    document.getElementById("notifImageInput").value = "";
+    fetchGlobalData();
+  } catch(e) {
+    showToast("تم الحفظ محلياً، حدث خطأ في إرسال OneSignal");
+  }
+}
+
+function renderOwnerSentNotifications(){
+  const container = document.getElementById("ownerSentNotificationsList");
+  if(!container) return;
+  if(!globalNotifications.length){
+    container.innerHTML = `<div class="empty" style="padding:10px;">لا توجد إشعارات مسجلة.</div>`;
+    return;
+  }
+  container.innerHTML = "";
+  globalNotifications.forEach(notif => {
+    const card = document.createElement("div");
+    card.className = "notification-card";
+    card.innerHTML = `
+      <div class="notification-title">${escapeHtml(notif.title)}</div>
+      <div class="notification-body">${escapeHtml(notif.body)}</div>
+      <div class="notification-time">${new Date(notif.time).toLocaleString('ar-EG')}</div>
+    `;
+    container.appendChild(card);
+  });
+}
+
+function escapeHtml(str) {
+  if(!str) return "";
+  return str.replace(/[&<>"']/g, function(m) {
+    switch (m) {
+      case '&': return '&amp;';
+      case '<': return '&lt;';
+      case '>': return '&gt;';
+      case '"': return '&quot;';
+      case "'": return '&#039;';
+      default: return m;
+    }
+  });
+}
+
+function showToast(message) {
+  const t = document.getElementById("toast");
+  if(t) {
+    t.textContent = message;
+    t.classList.add("show");
+    setTimeout(() => { t.classList.remove("show"); }, 3000);
+  }
+}
+</script>
+</body>
+</html>
